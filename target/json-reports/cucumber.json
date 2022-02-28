@@ -1,0 +1,138 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 6086000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "der User offnet die Seite \"amazon_url\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"amazon_url\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepdefinitions.LoginStepDefinitions.der_user_offnet_die_seite(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 924000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "der User klickt auf der Sign in Schaltfaeche",
+            "match": {
+              "location": "stepdefinitions.LoginStepDefinitions.der_user_klickt_auf_der_sign_in_schaltfaeche()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-28T11:35:19.648Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "TC002_Der User soll mit guelltigen Daten icht einloggen kann.",
+        "description": "",
+        "id": "us001-login-funktions.feature;tc002-der-user-soll-mit-guelltigen-daten-icht-einloggen-kann.",
+        "after": [
+          {
+            "result": {
+              "duration": 814000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 149000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "der User gibt eine ungueltige Email-Adresse \"ungueltige_Email_Adresse\" in das Email-Textfeld ein.",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ungueltige_Email_Adresse\"",
+                  "offset": 44
+                }
+              ],
+              "location": "stepdefinitions.LoginStepDefinitions.derUserGibtEineUngueltigeEmailAdresseInDasEmailTextfeldEin(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 890000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "der User klickt auf Continue Schaltflaeche.",
+            "match": {
+              "location": "stepdefinitions.LoginStepDefinitions.der_user_klickt_auf_continue_schaltflaeche()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 75000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "der User verifiziert, dass \"falsche_email_meldung\" Meldung angezeigt wird.",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"falsche_email_meldung\"",
+                  "offset": 27
+                }
+              ],
+              "location": "stepdefinitions.LoginStepDefinitions.derUserVerifiziertDassMeldungAngezeigtWird(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wip"
+          }
+        ]
+      }
+    ],
+    "name": "US001_login_funktions.feature",
+    "description": "",
+    "id": "us001-login-funktions.feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/US001_login_funktions.feature",
+    "tags": []
+  }
+]

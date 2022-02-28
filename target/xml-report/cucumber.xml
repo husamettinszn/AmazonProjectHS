@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="9.475">
+<testcase classname="US001_login_funktions.feature" name="TC002_Der User soll mit guelltigen Daten icht einloggen kann." time="9.074">
+<system-out><![CDATA[When der User offnet die Seite "amazon_url".................................passed
+Then der User klickt auf der Sign in Schaltfaeche...........................passed
+Then der User gibt eine ungueltige Email-Adresse "ungueltige_Email_Adresse" in das Email-Textfeld ein..passed
+And der User klickt auf Continue Schaltflaeche..............................passed
+Then der User verifiziert, dass "falsche_email_meldung" Meldung angezeigt wird..passed
+]]></system-out>
+</testcase>
+</testsuite>

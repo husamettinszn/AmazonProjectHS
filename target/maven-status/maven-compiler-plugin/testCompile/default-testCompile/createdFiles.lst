@@ -1,0 +1,6 @@
+pages\AmazonPage.class
+stepdefinitions\Hooks.class
+utilities\ConfigReader.class
+runners\TestRunner.class
+utilities\Driver.class
+stepdefinitions\LoginStepDefinitions.class
