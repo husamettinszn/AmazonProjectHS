@@ -48,4 +48,10 @@ public class AmazonPage {
 
     @FindBy(xpath = "//ul[@class='hmenu hmenu-visible hmenu-translateX']//li")
     public List<WebElement> unterTitel;
+
+    @FindBy(id = "a-autoid-0")
+    public WebElement acceptCookies;
+
+    @FindBy(xpath = "//ul[@class='a-unordered-list a-nostyle a-vertical a-spacing-medium']//li[@class='a-spacing-micro']")
+    public List<WebElement> sellerSort;
 }

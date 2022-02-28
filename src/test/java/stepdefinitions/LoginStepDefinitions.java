@@ -18,7 +18,7 @@ public class LoginStepDefinitions {
     @When("der User offnet die Seite {string}")
     public void der_user_offnet_die_seite(String string) {
         Driver.getDriver().get(ConfigReader.getProperty(string));
-        //amazonPage.cookiesBestaetigungsSchaltflaeche.click();
+        amazonPage.cookiesBestaetigungsSchaltflaeche.click();
     }
 
     @Then("der User klickt auf der Sign in Schaltfaeche")
