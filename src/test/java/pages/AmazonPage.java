@@ -52,6 +52,9 @@ public class AmazonPage {
     @FindBy(id = "a-autoid-0")
     public WebElement acceptCookies;
 
-    @FindBy(xpath = "//ul[@class='a-unordered-list a-nostyle a-vertical a-spacing-medium']//li[@class='a-spacing-micro']")
+    @FindBy(xpath = "//ul[@class='a-unordered-list a-nostyle a-vertical a-spacing-medium']//li")
     public List<WebElement> sellerSort;
+
+    @FindBy(xpath = "//span[@class='a-button-text a-declarative']")
+    public WebElement sortDropdown;
 }

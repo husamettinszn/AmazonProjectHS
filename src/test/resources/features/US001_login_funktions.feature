@@ -13,7 +13,7 @@ Feature: US001_login_funktions.feature
     And der User klickt auf Sign in Bestaetigungsschaltflaeche.
     Then der User verifiziert, dass In der Sign In Dropdown-Menu Sign Out Link angezeigt wird.
 
-  @wip
+
   Scenario: TC002_Der User soll mit guelltigen Daten icht einloggen kann.
     Then der User gibt eine ungueltige Email-Adresse "ungueltige_Email_Adresse" in das Email-Textfeld ein.
     And der User klickt auf Continue Schaltflaeche.

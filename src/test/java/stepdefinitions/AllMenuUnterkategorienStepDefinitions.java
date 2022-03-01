@@ -5,6 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en_old.Ac;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -28,8 +29,6 @@ public class AllMenuUnterkategorienStepDefinitions {
     @And("der User waehlt die Kategorie {string} aus.")
     public void derUserWaehltDieKategorieAus(String arg0) {
 
-        actions.sendKeys()
-
         for (int i = 0; i < amazonPage.items.size(); i++) {
             if (amazonPage.items.get(i).getText().contains(arg0)) {
                 amazonPage.items.get(i).click();
@@ -41,22 +40,24 @@ public class AllMenuUnterkategorienStepDefinitions {
     @Then("der User verifiziert,dass der Anzahl der Unterkategorien {int} ist.")
     public void derUserVerifiziertDassDerAnzahlDerUnterkategorienIst(int arg0) {
         System.out.println(amazonPage.unterTitel.size());
-        Assert.assertTrue(amazonPage.unterTitel.size() - 3 == arg0);
+        Assert.assertTrue(amazonPage.unterTitel.size() - 5 == arg0);
 
         List<String> titelList = new ArrayList<>();
         for (WebElement w : amazonPage.unterTitel
         ) {
-            System.out.println(w.getText());
+            //System.out.println(w.getText());
             titelList.add(w.getText());
         }
         System.out.println(titelList);
 
-        List<String> vordeneList = new ArrayList<>();
+        List<String> vorhandeneList = new ArrayList<>();
 
-        vordeneList.addAll(Arrays.asList("HAUPTMENÜ, Prime Video, Alle Videos, Enthalten in Prime, Prime Video Channels, Kaufen und leihen, Meine Watchlist, Gekaufte und geliehene Titel, Auf vielen Geräten verfügbar"));
-        System.out.println(vordeneList);
+        vorhandeneList.addAll(Arrays.asList("HAUPTMENÜ", "Alle Fire TV-Geräte", "Streaming-Geräte","Fire TV Smart-TVs", "Zubehör", "","Filme, Serien Und Mehr", "Prime Video - Enthalten in Prime", "Prime Video - Alle Videos", "Apps & Spiele für Fire TV", "Amazon Photos", ""));
+        System.out.println(vorhandeneList);
 
-        Assert.assertTrue(vordeneList.containsAll(titelList));
+        Assert.assertTrue(titelList.containsAll(vorhandeneList));
+
+
     }
 
 

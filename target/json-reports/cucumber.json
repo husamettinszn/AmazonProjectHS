@@ -3,15 +3,39 @@
     "line": 1,
     "elements": [
       {
+        "start_timestamp": "2022-03-01T08:32:12.547Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.setUp()"
+            }
+          }
+        ],
         "line": 3,
-        "name": "",
+        "name": "Wenn der Benutzer eine beliebige Kategorie aus dem Menü ALLE auswählt, sollte er sehen können, dass die Unterkategorien aufgelistet sind.",
         "description": "",
-        "type": "background",
-        "keyword": "Background",
+        "id": "us002-unterkategorien-allmenu;wenn-der-benutzer-eine-beliebige-kategorie-aus-dem-menü-alle-auswählt--sollte-er-sehen-können--dass-die-unterkategorien-aufgelistet-sind.",
+        "after": [
+          {
+            "result": {
+              "duration": 946000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 6086000000,
+              "duration": 7897000000,
               "status": "passed"
             },
             "line": 4,
@@ -29,94 +53,49 @@
           },
           {
             "result": {
-              "duration": 924000000,
+              "duration": 1419000000,
               "status": "passed"
             },
             "line": 5,
-            "name": "der User klickt auf der Sign in Schaltfaeche",
+            "name": "der User klickt auf dem ALL-Hamburgermenu",
             "match": {
-              "location": "stepdefinitions.LoginStepDefinitions.der_user_klickt_auf_der_sign_in_schaltfaeche()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2022-02-28T11:35:19.648Z",
-        "before": [
-          {
-            "result": {
-              "duration": 2000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepdefinitions.Hooks.setUp()"
-            }
-          }
-        ],
-        "line": 17,
-        "name": "TC002_Der User soll mit guelltigen Daten icht einloggen kann.",
-        "description": "",
-        "id": "us001-login-funktions.feature;tc002-der-user-soll-mit-guelltigen-daten-icht-einloggen-kann.",
-        "after": [
-          {
-            "result": {
-              "duration": 814000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 149000000,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "der User gibt eine ungueltige Email-Adresse \"ungueltige_Email_Adresse\" in das Email-Textfeld ein.",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"ungueltige_Email_Adresse\"",
-                  "offset": 44
-                }
-              ],
-              "location": "stepdefinitions.LoginStepDefinitions.derUserGibtEineUngueltigeEmailAdresseInDasEmailTextfeldEin(java.lang.String)"
+              "location": "stepdefinitions.AllMenuUnterkategorienStepDefinitions.derUserKlicktAufDemALLHamburgermenu()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 890000000,
+              "duration": 1511000000,
               "status": "passed"
             },
-            "line": 19,
-            "name": "der User klickt auf Continue Schaltflaeche.",
+            "line": 6,
+            "name": "der User waehlt die Kategorie \"Fire TV\" aus.",
             "match": {
-              "location": "stepdefinitions.LoginStepDefinitions.der_user_klickt_auf_continue_schaltflaeche()"
+              "arguments": [
+                {
+                  "val": "\"Fire TV\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepdefinitions.AllMenuUnterkategorienStepDefinitions.derUserWaehltDieKategorieAus(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 75000000,
+              "duration": 223000000,
               "status": "passed"
             },
-            "line": 20,
-            "name": "der User verifiziert, dass \"falsche_email_meldung\" Meldung angezeigt wird.",
+            "line": 7,
+            "name": "der User verifiziert,dass der Anzahl der Unterkategorien 8 ist.",
             "match": {
               "arguments": [
                 {
-                  "val": "\"falsche_email_meldung\"",
-                  "offset": 27
+                  "val": "8",
+                  "offset": 57
                 }
               ],
-              "location": "stepdefinitions.LoginStepDefinitions.derUserVerifiziertDassMeldungAngezeigtWird(java.lang.String)"
+              "location": "stepdefinitions.AllMenuUnterkategorienStepDefinitions.derUserVerifiziertDassDerAnzahlDerUnterkategorienIst(int)"
             },
             "keyword": "Then "
           }
@@ -128,11 +107,11 @@
         ]
       }
     ],
-    "name": "US001_login_funktions.feature",
+    "name": "US002_unterkategorien_allmenu",
     "description": "",
-    "id": "us001-login-funktions.feature",
+    "id": "us002-unterkategorien-allmenu",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/US001_login_funktions.feature",
+    "uri": "file:src/test/resources/features/US002_unterkategorien_allmenu.feature",
     "tags": []
   }
 ]
