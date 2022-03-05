@@ -3,101 +3,60 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-03-01T08:32:12.547Z",
-        "before": [
-          {
-            "result": {
-              "duration": 4000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepdefinitions.Hooks.setUp()"
-            }
-          }
-        ],
+        "start_timestamp": "2022-03-05T15:28:32.912Z",
         "line": 3,
-        "name": "Wenn der Benutzer eine beliebige Kategorie aus dem Menü ALLE auswählt, sollte er sehen können, dass die Unterkategorien aufgelistet sind.",
+        "name": "Create_Board",
         "description": "",
-        "id": "us002-unterkategorien-allmenu;wenn-der-benutzer-eine-beliebige-kategorie-aus-dem-menü-alle-auswählt--sollte-er-sehen-können--dass-die-unterkategorien-aufgelistet-sind.",
-        "after": [
-          {
-            "result": {
-              "duration": 946000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
+        "id": "trello-test;create-board",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 7897000000,
+              "duration": 3972000000,
               "status": "passed"
             },
             "line": 4,
-            "name": "der User offnet die Seite \"amazon_url\"",
+            "name": "User sent request, um \"api\" board zu erstellen",
             "match": {
               "arguments": [
                 {
-                  "val": "\"amazon_url\"",
-                  "offset": 26
+                  "val": "\"api\"",
+                  "offset": 22
                 }
               ],
-              "location": "stepdefinitions.LoginStepDefinitions.der_user_offnet_die_seite(java.lang.String)"
+              "location": "api.stepdefinitions.CreatBoardStepDefinitions.user_sent_request_um_board_zu_erstellen(java.lang.String)"
             },
-            "keyword": "When "
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1419000000,
+              "duration": 1000000,
               "status": "passed"
             },
             "line": 5,
-            "name": "der User klickt auf dem ALL-Hamburgermenu",
+            "name": "Assert status code",
             "match": {
-              "location": "stepdefinitions.AllMenuUnterkategorienStepDefinitions.derUserKlicktAufDemALLHamburgermenu()"
+              "location": "api.stepdefinitions.CreatBoardStepDefinitions.assert_status_code()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1511000000,
               "status": "passed"
             },
             "line": 6,
-            "name": "der User waehlt die Kategorie \"Fire TV\" aus.",
+            "name": "Assert board name ist \"api\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Fire TV\"",
-                  "offset": 30
+                  "val": "\"api\"",
+                  "offset": 22
                 }
               ],
-              "location": "stepdefinitions.AllMenuUnterkategorienStepDefinitions.derUserWaehltDieKategorieAus(java.lang.String)"
+              "location": "api.stepdefinitions.CreatBoardStepDefinitions.assertBoardNameIst(java.lang.String)"
             },
             "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 223000000,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "der User verifiziert,dass der Anzahl der Unterkategorien 8 ist.",
-            "match": {
-              "arguments": [
-                {
-                  "val": "8",
-                  "offset": 57
-                }
-              ],
-              "location": "stepdefinitions.AllMenuUnterkategorienStepDefinitions.derUserVerifiziertDassDerAnzahlDerUnterkategorienIst(int)"
-            },
-            "keyword": "Then "
           }
         ],
         "tags": [
@@ -107,11 +66,11 @@
         ]
       }
     ],
-    "name": "US002_unterkategorien_allmenu",
+    "name": "Trello_test",
     "description": "",
-    "id": "us002-unterkategorien-allmenu",
+    "id": "trello-test",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/US002_unterkategorien_allmenu.feature",
+    "uri": "file:src/test/resources/apiFeature/createBoard.feature",
     "tags": []
   }
 ]

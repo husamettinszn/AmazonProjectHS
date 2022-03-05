@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="12.363">
-<testcase classname="US002_unterkategorien_allmenu" name="Wenn der Benutzer eine beliebige Kategorie aus dem Menü ALLE auswählt, sollte er sehen können, dass die Unterkategorien aufgelistet sind." time="12.096">
-<system-out><![CDATA[When der User offnet die Seite "amazon_url".................................passed
-Then der User klickt auf dem ALL-Hamburgermenu..............................passed
-And der User waehlt die Kategorie "Fire TV" aus.............................passed
-Then der User verifiziert,dass der Anzahl der Unterkategorien 8 ist.........passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="4.436">
+<testcase classname="Trello_test" name="Create_Board" time="4.094">
+<system-out><![CDATA[Given User sent request, um "api" board zu erstellen........................passed
+Then Assert status code.....................................................passed
+And Assert board name ist "api".............................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
