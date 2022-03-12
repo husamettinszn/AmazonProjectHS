@@ -2,19 +2,19 @@ package api.stepdefinitions;
 
 
 import api.trellopojos.RequestPojo;
+import api.trellopojos.ResponsePojo;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
+import org.junit.Assert;
 import ui.utilities.ConfigReader;
-
-import java.util.HashMap;
 
 import static io.restassured.RestAssured.given;
 
 public class CreatBoardPOJO extends TestBaseApi {
 
     Response response;
+    ResponsePojo resPojo;
 
     @Given("POST request fuer Erstellung board {string} mit pojo")
     public void postRequestFuerErstellungBoardMitPojo(String boardName) {
@@ -35,7 +35,12 @@ public class CreatBoardPOJO extends TestBaseApi {
     }
 
     @And("assert response {string}")
-    public void assertResponse(String arg0) {
+    public void assertResponse(String boardName) {
+
+       resPojo=response.as(ResponsePojo.class);
+        System.out.println(resPojo);
+        Assert.assertEquals(boardName, resPojo.getName());
+        System.out.println(resPojo.getId());
     }
 
 
@@ -44,5 +49,8 @@ public class CreatBoardPOJO extends TestBaseApi {
 
     }
 
-
+    @And("assert,dass status code {int} ist")
+    public void assertDassStatusCodeIst(int statusCode) {
+        Assert.assertEquals(statusCode, response.getStatusCode());
+    }
 }

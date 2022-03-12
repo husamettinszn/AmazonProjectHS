@@ -3,29 +3,23 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-03-08T18:45:17.176Z",
+        "start_timestamp": "2022-03-12T19:11:14.581Z",
         "line": 3,
-        "name": "Create_Board",
+        "name": "Create_List",
         "description": "",
-        "id": "trello-test;create-board",
+        "id": ";create-list",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 3250000000,
+              "duration": 5026000000,
               "status": "passed"
             },
             "line": 4,
-            "name": "User sent request, um \"hasan\" board zu erstellen",
+            "name": "POST request for create list",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"hasan\"",
-                  "offset": 22
-                }
-              ],
-              "location": "api.stepdefinitions.CreatBoardStepDefinitions.user_sent_request_um_board_zu_erstellen(java.lang.String)"
+              "location": "api.stepdefinitions.CreateListStepDefinition.post_request_for_create_list()"
             },
             "keyword": "Given "
           },
@@ -34,28 +28,11 @@
               "status": "passed"
             },
             "line": 5,
-            "name": "Assert status code",
+            "name": "verify response",
             "match": {
-              "location": "api.stepdefinitions.CreatBoardStepDefinitions.assert_status_code()"
+              "location": "api.stepdefinitions.CreateListStepDefinition.verify_response()"
             },
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "Assert board name ist \"api\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"api\"",
-                  "offset": 22
-                }
-              ],
-              "location": "api.stepdefinitions.CreatBoardStepDefinitions.assertBoardNameIst(java.lang.String)"
-            },
-            "keyword": "And "
           }
         ],
         "tags": [
@@ -65,11 +42,11 @@
         ]
       }
     ],
-    "name": "Trello_test",
+    "name": "",
     "description": "",
-    "id": "trello-test",
+    "id": "",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/apiFeature/createBoard.feature",
+    "uri": "file:src/test/resources/apiFeature/createList.feature",
     "tags": []
   }
 ]

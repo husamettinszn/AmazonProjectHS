@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="3.606">
-<testcase classname="Trello_test" name="Create_Board" time="3.337">
-<system-out><![CDATA[Given User sent request, um "hasan" board zu erstellen......................passed
-Then Assert status code.....................................................passed
-And Assert board name ist "api".............................................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="5.338">
+<testcase classname="Unknown" name="Create_List" time="5.109">
+<system-out><![CDATA[Given POST request for create list..........................................passed
+Then verify response........................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
