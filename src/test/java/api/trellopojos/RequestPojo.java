@@ -7,9 +7,9 @@ public class RequestPojo {
     //De_serialosation: JSON tipinde gelen datalari JAVA objelerine cevirmek demektir.
     //ResponsePojo respPojo = response.as(ResponsePojo.class);
 
-   public String name;
-   public String key;
-   public String token;
+    private String name;
+    private String key;
+    private String token;
 
     public RequestPojo() {
     }
