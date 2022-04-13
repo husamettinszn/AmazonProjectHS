@@ -3,34 +3,89 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-03-12T19:11:14.581Z",
+        "start_timestamp": "2022-04-10T14:40:46.711Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ui.stepdefinitions.Hooks.setUp()"
+            }
+          }
+        ],
         "line": 3,
-        "name": "Create_List",
+        "name": "Wenn der Benutzer eine beliebige Kategorie aus dem Menü ALLE auswählt, sollte er sehen können, dass die Unterkategorien aufgelistet sind.",
         "description": "",
-        "id": ";create-list",
+        "id": "us002-unterkategorien-allmenu;wenn-der-benutzer-eine-beliebige-kategorie-aus-dem-menü-alle-auswählt--sollte-er-sehen-können--dass-die-unterkategorien-aufgelistet-sind.",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 5026000000,
+              "duration": 7294000000,
               "status": "passed"
             },
             "line": 4,
-            "name": "POST request for create list",
+            "name": "der User offnet die Seite \"amazon_url\"",
             "match": {
-              "location": "api.stepdefinitions.CreateListStepDefinition.post_request_for_create_list()"
+              "arguments": [
+                {
+                  "val": "\"amazon_url\"",
+                  "offset": 26
+                }
+              ],
+              "location": "ui.stepdefinitions.LoginStepDefinitions.der_user_offnet_die_seite(java.lang.String)"
             },
-            "keyword": "Given "
+            "keyword": "When "
           },
           {
             "result": {
+              "duration": 545000000,
               "status": "passed"
             },
             "line": 5,
-            "name": "verify response",
+            "name": "der User klickt auf dem ALL-Hamburgermenu",
             "match": {
-              "location": "api.stepdefinitions.CreateListStepDefinition.verify_response()"
+              "location": "ui.stepdefinitions.AllMenuUnterkategorienStepDefinitions.derUserKlicktAufDemALLHamburgermenu()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 972000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "der User waehlt die Kategorie \"Fire TV\" aus.",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Fire TV\"",
+                  "offset": 30
+                }
+              ],
+              "location": "ui.stepdefinitions.AllMenuUnterkategorienStepDefinitions.derUserWaehltDieKategorieAus(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat ui.stepdefinitions.AllMenuUnterkategorienStepDefinitions.derUserVerifiziertDassDerAnzahlDerUnterkategorienIst(AllMenuUnterkategorienStepDefinitions.java:54)\r\n\tat ✽.der User verifiziert,dass der Anzahl der Unterkategorien 8 ist.(file:///C:/Users/Husamettin/IdeaProjects/AmazonProjectHS/src/test/resources/uiFeature/US002_unterkategorien_allmenu.feature:7)\r\n",
+              "duration": 202000000,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "der User verifiziert,dass der Anzahl der Unterkategorien 8 ist.",
+            "match": {
+              "arguments": [
+                {
+                  "val": "8",
+                  "offset": 57
+                }
+              ],
+              "location": "ui.stepdefinitions.AllMenuUnterkategorienStepDefinitions.derUserVerifiziertDassDerAnzahlDerUnterkategorienIst(int)"
             },
             "keyword": "Then "
           }
@@ -42,11 +97,11 @@
         ]
       }
     ],
-    "name": "",
+    "name": "US002_unterkategorien_allmenu",
     "description": "",
-    "id": "",
+    "id": "us002-unterkategorien-allmenu",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/apiFeature/createList.feature",
+    "uri": "file:src/test/resources/uiFeature/US002_unterkategorien_allmenu.feature",
     "tags": []
   }
 ]

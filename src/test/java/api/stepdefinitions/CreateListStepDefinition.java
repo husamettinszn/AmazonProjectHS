@@ -81,6 +81,6 @@ public class CreateListStepDefinition extends TestBaseApi {
             responsePojo=response.as(ResponsePojo.class);
             Assert.assertEquals(200, response.getStatusCode());
             Assert.assertEquals(ConfigReader.getProperty("idList"), json.getString("id"));
-            Assert.assertEquals(responsePojo.);
+
     }
 }
